@@ -4,10 +4,6 @@ import json
 import re
 import os
 
-app = Flask(__name__, template_folder='templates', static_folder='static')
-
-OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "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")
-
 # ─── Bloom's Taxonomy Intent Classifier ───────────────────────────────────────
 INTENT_PROFILES = {
     "essay": {
