@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GuidedMind — Cognitive Constraint Chatbot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+
+<!-- ═══════════════════ LANDING PAGE ═══════════════════ -->
+<div id="landingPage" class="landing-page">
+
+  <canvas id="particleCanvas"></canvas>
+  <div class="noise-overlay"></div>
+
+  <nav class="landing-nav">
+    <div class="nav-logo">
+      <span class="logo-glyph">GM</span>
+      <span class="logo-wordmark">GuidedMind</span>
+    </div>
+    <div class="nav-badge">
+      <span class="badge-pulse"></span>
+      Cognitive Constraint Engine Active
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-bar"></span>
+        Scaffolded Intelligent Tutoring System
+      </div>
+      <h1 class="hero-title">
+        <span class="ht-1">Guided</span>
+        <span class="ht-2"><em>Mind</em></span>
+        <span class="ht-3">Cognitive Constraint<br/>Chatbot</span>
+      </h1>
+      <p class="hero-sub">
+        The AI that refuses to hand you answers —<br/>
+        and that's exactly what makes it <em>extraordinary.</em>
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="enterChatMode()">
+          Use It
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M3.5 9h11M9.5 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <span class="hero-note">No shortcuts. No spoon-feeding. Just real growth.</span>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="orb-container">
+        <div class="hero-orb"></div>
+        <div class="stat-float sf1"><span class="sf-num">4</span><span class="sf-lbl">Academic Domains</span></div>
+        <div class="stat-float sf2"><span class="sf-num">0%</span><span class="sf-lbl">Complete Answers</span></div>
+        <div class="stat-float sf3"><span class="sf-num">∞</span><span class="sf-lbl">Cognitive Depth</span></div>
+        <div class="stat-float sf4"><span class="sf-num">3s</span><span class="sf-lbl">Response Time</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section">
+    <div class="sec-label">Core Architecture</div>
+    <h2 class="sec-title">Four Layers of Controlled Intelligence</h2>
+    <p class="sec-sub">Every query passes through a purpose-built pipeline designed to guide cognition, not replace it.</p>
+
+    <div class="feat-grid">
+      <div class="feat-card fc-span2">
+        <div class="fc-number">01</div>
+        <div class="fc-tag">Input Processing Layer</div>
+        <h3 class="fc-title">Intent Classification Engine</h3>
+        <p class="fc-body">Every query is semantically tokenised, embedded, and classified into one of four academic domains. Domain-specific restriction strategies are activated automatically — the system knows exactly how much guidance is appropriate for maths vs essay writing vs conceptual learning vs code.</p>
+        <div class="fc-pills">
+          <span class="fp fp-essay">✍️ Essay Writing</span>
+          <span class="fp fp-math">🔢 Mathematics</span>
+          <span class="fp fp-concept">💡 Conceptual</span>
+          <span class="fp fp-code">💻 Programming</span>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="fc-number">02</div>
+        <div class="fc-tag">Controlled Response Layer</div>
+        <h3 class="fc-title">Bloom's Taxonomy Depth Control</h3>
+        <p class="fc-body">Responses are locked to <em>Understand / Apply</em> levels of Bloom's taxonomy. The depth controller and prompt engineering together prevent the model from reaching "Create" — ensuring you always do the synthesis yourself.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="fc-number">03</div>
+        <div class="fc-tag">Constraint Engine</div>
+        <h3 class="fc-title">Response Filtering &amp; RCE</h3>
+        <p class="fc-body">A post-generation filter catches complete solutions, final answers, and compilable code even if the LLM tries to provide them. Token limiters, solution completeness detectors, and step-elimination modules run on every output.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="fc-number">04</div>
+        <div class="fc-tag">Socratic Method</div>
+        <h3 class="fc-title">Question-Driven Scaffolding</h3>
+        <p class="fc-body">Every response closes with a precision-crafted Socratic question. You receive key concepts, a thinking scaffold, and one question that forces you to reason one level deeper — not a passive reading experience.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="fc-number">05</div>
+        <div class="fc-tag">LLM API Control</div>
+        <h3 class="fc-title">Deterministic Parameter Engine</h3>
+        <p class="fc-body">Temperature locked at 0.3, Top-p at 0.8, with stop sequences that prevent full completion. Reasoning mode enabled for multi-step academic guidance that is consistent and non-hallucinatory.</p>
+      </div>
+
+      <div class="feat-card fc-accent-card">
+        <div class="fc-number">06</div>
+        <div class="fc-tag">Integrity Layer</div>
+        <h3 class="fc-title">Academic Integrity by Design</h3>
+        <p class="fc-body">Not a bolt-on filter — integrity is baked into every layer of the architecture. GuidedMind cannot, by design, enable plagiarism, passive learning, or AI over-reliance.</p>
+        <div class="fc-integrity-badge">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L2 4v4c0 3.31 2.69 6 6 7 3.31-1 6-3.69 6-7V4L8 1z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Integrity Enforced
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY NOT CHATGPT -->
+  <section class="vs-section">
+    <div class="sec-label">Why GuidedMind?</div>
+    <h2 class="sec-title">Not ChatGPT. Not Gemini. <em>Better.</em></h2>
+
+    <div class="vs-grid">
+      <div class="vs-col vs-col-bad">
+        <div class="vs-header">
+          <span class="vs-icon">⚡</span> Easy AI Tools
+        </div>
+        <ul class="vs-list">
+          <li><span class="x-mark">✗</span> Hands you complete answers instantly</li>
+          <li><span class="x-mark">✗</span> Bypasses your thinking entirely</li>
+          <li><span class="x-mark">✗</span> Trains copy-paste behaviour</li>
+          <li><span class="x-mark">✗</span> Creates dependency loops</li>
+          <li><span class="x-mark">✗</span> Enables academic dishonesty</li>
+          <li><span class="x-mark">✗</span> Knowledge you forget in hours</li>
+          <li><span class="x-mark">✗</span> Makes you worse at thinking over time</li>
+        </ul>
+      </div>
+
+      <div class="vs-mid">
+        <div class="vs-vs-badge">VS</div>
+        <div class="vs-arrow-down"></div>
+      </div>
+
+      <div class="vs-col vs-col-good">
+        <div class="vs-header">
+          <span class="vs-icon">🧠</span> GuidedMind
+        </div>
+        <ul class="vs-list">
+          <li><span class="check-mark">✓</span> Scaffolds your thinking process</li>
+          <li><span class="check-mark">✓</span> Forces active cognitive engagement</li>
+          <li><span class="check-mark">✓</span> Builds durable, transferable skills</li>
+          <li><span class="check-mark">✓</span> Trains independent reasoning</li>
+          <li><span class="check-mark">✓</span> Enforces academic integrity by design</li>
+          <li><span class="check-mark">✓</span> Knowledge that sticks permanently</li>
+          <li><span class="check-mark">✓</span> Makes you smarter with every session</li>
+        </ul>
+      </div>
+    </div>
+
+    <blockquote class="vs-quote">
+      "The student who struggles and figures it out will always outperform the one who copied.<br/>
+      <em>GuidedMind builds the former.</em>"
+    </blockquote>
+
+    <div class="vs-cta-row">
+      <button class="btn-primary btn-sm" onclick="enterChatMode()">
+        Start Thinking →
+      </button>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <div class="sec-label">The Process</div>
+    <h2 class="sec-title">How GuidedMind Works</h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-num">01</div>
+        <h4 class="how-title">You Ask</h4>
+        <p class="how-body">Submit any academic question. The system accepts natural language queries across all domains.</p>
+      </div>
+      <div class="how-line"></div>
+      <div class="how-step">
+        <div class="how-num">02</div>
+        <h4 class="how-title">Intent Classified</h4>
+        <p class="how-body">Domain is detected and restriction level — High, Medium, or Low — is assigned automatically.</p>
+      </div>
+      <div class="how-line"></div>
+      <div class="how-step">
+        <div class="how-num">03</div>
+        <h4 class="how-title">LLM Constrained</h4>
+        <p class="how-body">Prompt engineering and parameter control forces the model into scaffold-only mode before generation.</p>
+      </div>
+      <div class="how-line"></div>
+      <div class="how-step">
+        <div class="how-num">04</div>
+        <h4 class="how-title">You Think</h4>
+        <p class="how-body">You receive key concepts, a thinking scaffold, a Socratic question — and then you do the real work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="landing-footer">
+    <div class="lf-top">
+      <div class="lf-brand">
+        <span class="logo-glyph">GM</span>
+        <div>
+          <div class="lf-name">GuidedMind</div>
+          <div class="lf-sub">Cognitive Constraint Chatbot</div>
+        </div>
+      </div>
+      <button class="btn-primary btn-sm" onclick="enterChatMode()">
+        Open Chat →
+      </button>
+    </div>
+    <p class="lf-quote">
+      "The discomfort you feel when GuidedMind refuses to just answer your question?
+      That discomfort is your brain growing.
+      Stay. Think. <em>Become someone who doesn't need shortcuts.</em>"
+    </p>
+    <div class="lf-credits">
+      Restrictive Productivity Theory · Bloom's Taxonomy Aligned · Academic Integrity First
+    </div>
+  </footer>
+
+</div><!-- /landingPage -->
+
+
+<!-- ═══════════════════ CHAT PAGE ═══════════════════ -->
+<div id="chatPage" class="chat-page hidden">
+
+  <canvas id="chatParticleCanvas"></canvas>
+  <div class="noise-overlay"></div>
+
+  <!-- CHAT HEADER -->
+  <header class="chat-header">
+    <button class="back-btn" onclick="exitChatMode()">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="ch-center">
+      <span class="logo-glyph sm-glyph">GM</span>
+      <div>
+        <div class="ch-name">GuidedMind</div>
+        <div class="ch-sub">Cognitive Constraint Chatbot · Restrictive Mode ON</div>
+      </div>
+    </div>
+    <div class="ch-status">
+      <span class="status-dot"></span>
+      Active
+    </div>
+  </header>
+
+  <!-- MESSAGES -->
+  <div class="messages-area" id="messagesArea"></div>
+
+  <!-- INPUT -->
+  <div class="chat-input-zone">
+    <div class="ciz-inner">
+      <div class="textarea-wrap">
+        <textarea id="chatInput" class="chat-textarea"
+          placeholder="Ask anything academic… e.g. 'How do I approach integration by parts?'"
+          rows="1"></textarea>
+        <div class="intent-sniff" id="intentSniff"></div>
+      </div>
+      <button class="send-btn" id="chatSendBtn" onclick="submitChatQuery()">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M3 10L17 3l-4 7 4 7L3 10z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+    <!-- DOMAIN PILLS — now live below the input -->
+    <div class="chat-domains">
+      <button class="d-pill active" data-intent="concept">💡 Concepts</button>
+      <button class="d-pill" data-intent="math">🔢 Maths</button>
+      <button class="d-pill" data-intent="coding">💻 Coding</button>
+      <button class="d-pill" data-intent="essay">✍️ Essay</button>
+    </div>
+    <p class="ciz-note">
+      ⚡ GuidedMind never gives full answers ·
+      <span>Your brain does the real work</span>
+    </p>
+  </div>
+
+</div><!-- /chatPage -->
+
+<script src="/static/main.js"></script>
+</body>
+</html>
